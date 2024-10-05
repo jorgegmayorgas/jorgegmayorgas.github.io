@@ -1,0 +1,3 @@
+,model,r_square_score,mae_score,mse_score,rmse_score,mape_score
+0,{'grid_search_xgb'},0.8369,0.021,0.0015,0.0384,inf
+1,{'random_search_xgb'},-58.6302,1.6156,2.6271,1.6208,inf

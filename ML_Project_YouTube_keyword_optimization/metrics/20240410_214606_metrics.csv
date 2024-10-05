@@ -1,0 +1,14 @@
+,model,r_square_score,mae_score,mse_score,rmse_score,mape_score
+0,{'RandomForestRegressor'},0.6793,0.026,0.0043,0.0656,inf
+1,{'LinearRegression'},-6.281837560935658e+20,41048964.482,8.43641168934018e+18,2904550169.8783,inf
+2,{'DecisionTreeRegressor'},0.1061,0.0364,0.012,0.1096,inf
+3,{'GradientBoostingRegressor'},0.6502,0.0292,0.0047,0.0685,inf
+4,{'KNeighborsRegressor'},0.2265,0.0542,0.0104,0.1019,inf
+5,{'XGBRegressor'},0.6396,0.0281,0.0048,0.0696,inf
+6,{'LGBMRegressor'},0.6704,0.0279,0.0044,0.0665,inf
+7,{'CatBoostRegressor'},0.6472,0.0276,0.0047,0.0688,inf
+8,{'Ridge'},0.3951,0.0393,0.0081,0.0901,inf
+9,{'Lasso'},-0.0001,0.0691,0.0134,0.1159,inf
+10,{'MLP'},0.1926,0.053,0.0108,0.1041,inf
+11,{'ElasticNet'},-0.0001,0.0691,0.0134,0.1159,inf
+12,{'Keras'},0.3521,0.0467,0.0087,0.0933,inf
