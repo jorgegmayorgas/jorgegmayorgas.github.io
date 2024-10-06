@@ -1,0 +1,791 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="I am Jorge Giménez. I am Analyst/Developer of computer applications since 2001 and Data Scientist since 2024">
+      
+      
+        <meta name="author" content="Jorge Giménez">
+      
+      
+        <link rel="canonical" href="https://jorgegmayorgas.github.io/Billboard_Hot_100/EDA/notebooks/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Index - Portfolio of Jorge Giménez</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-4QY3899XS4"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-4QY3899XS4",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-4QY3899XS4",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#about-the-project" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Portfolio of Jorge Giménez" class="md-header__button md-logo" aria-label="Portfolio of Jorge Giménez" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Portfolio of Jorge Giménez
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jorgegmayorgas/jorgegmayorgas.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jorgegmayorgas/jorgegmayorgas.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Portfolio of Jorge Giménez" class="md-nav__button md-logo" aria-label="Portfolio of Jorge Giménez" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Portfolio of Jorge Giménez
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jorgegmayorgas/jorgegmayorgas.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jorgegmayorgas/jorgegmayorgas.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Current projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Current projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../actualproject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actual project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Previous projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Previous projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hundirlaflota/readme.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hundir La Flota
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML_Project_YouTube_keyword_optimization/readme.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    YouTube Keyword Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      About The Project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="About The Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#built-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built With
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roadmap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acknowledgments
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Index</h1>
+
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<p><a name="readme-top"></a></p>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+<!-- [![Contributors][contributors-shield]][contributors-url] -->
+<p><a href="https://github.com/jorgegmayorgas/ML_Project_YouTube_keyword_optimization/network/members"><img alt="Forks" src="https://img.shields.io/github/forks/jorgegmayorgas/ML_Project_YouTube_keyword_optimization.svg?style=for-the-badge" /></a>
+<a href="https://github.com/jorgegmayorgas/ML_Project_YouTube_keyword_optimization/stargazers"><img alt="Stargazers" src="https://img.shields.io/github/stars/jorgegmayorgas/ML_Project_YouTube_keyword_optimization.svg?style=for-the-badge" /></a>
+<a href="https://github.com/jorgegmayorgas/ML_Project_YouTube_keyword_optimization/issues"><img alt="Issues" src="https://img.shields.io/github/issues/jorgegmayorgas/ML_Project_YouTube_keyword_optimization.svg?style=for-the-badge" /></a>
+<a href="https://github.com/jorgegmayorgas/ML_Project_YouTube_keyword_optimization/blob/master/LICENSE.txt"><img alt="MIT License" src="https://img.shields.io/github/license/jorgegmayorgas/ML_Project_YouTube_keyword_optimization.svg?style=for-the-badge" /></a>
+<a href="https://www.linkedin.com/in/jgimenezm/?locale=en_US"><img alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&amp;logo=linkedin&amp;colorB=555" /></a></p>
+<!-- PROJECT LOGO -->
+<p><br /></p>
+<div align="center">
+  <a href="https://github.com/jorgegmayorgas/ML_Project_YouTube_keyword_optimization">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+<h3 align="center">ML model for optimizing YouTube keywords</h3>
+
+  <p align="center">
+    This is a Jupyter Notebook for creating an EDA using dataset from <a href="https://www.kaggle.com/datasets/thedevastator/billboard-hot-100-audio-features">Kaggle</a>
+    <br />
+    <a href="https://github.com/jorgegmayorgas/ML_Project_YouTube_keyword_optimization"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/jorgegmayorgas/ML_Project_YouTube_keyword_optimization">View Demo</a>
+    ·
+    <a href="https://github.com/jorgegmayorgas/ML_Project_YouTube_keyword_optimization/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/jorgegmayorgas/ML_Project_YouTube_keyword_optimization/issues">Request Feature</a>
+  </p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+<h2 id="about-the-project">About The Project</h2>
+<p><a href="https://github.com/jorgegmayorgas/ML_Project_YouTube_keyword_optimization"><img alt="Product Name Screen Shot" src="images/keywords.jpg" /></a></p>
+<!--Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `jorgegmayorgas`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description` -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<h3 id="built-with">Built With</h3>
+<ul>
+<li><a href="https://www.python.org/"><img alt="Python" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&amp;logo=python&amp;logoColor=ffdd54" /></a></li>
+<li><a href="https://jupyter.org/"><img alt="Jupyter" src="https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&amp;logo=jupyter&amp;logoColor=white" /></a></li>
+<li><a href="https://code.visualstudio.com/"><img alt="Visual_Code" src="https://img.shields.io/badge/Vscode-007ACC?style=for-the-badge&amp;logo=visualstudiocode&amp;logoColor=white" /></a></li>
+<li><a href="https://www.microsoft.com/microsoft-365/powerpoint"><img alt="PowerPoint" src="https://img.shields.io/badge/Microsoft_PowerPoint-B7472A?style=for-the-badge&amp;logo=microsoft-powerpoint&amp;logoColor=white" /></a></li>
+<li><a href="https://chat.openai.com/g/g-2fkFE8rbu-dall-e"><img alt="DALL-E Enabled" src="https://img.shields.io/badge/DALL--E-Enabled-green" /></a></li>
+</ul>
+<!-- * [![Angular][Angular.io]][Angular-url] -->
+<!-- * [![Svelte][Svelte.dev]][Svelte-url] -->
+<!-- * [![Laravel][Laravel.com]][Laravel-url] -->
+<!-- * [![Bootstrap][Bootstrap.com]][Bootstrap-url] -->
+<!-- * [![JQuery][JQuery.com]][JQuery-url] -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+<h2 id="getting-started">Getting Started</h2>
+<!-- This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps. -->
+
+<h3 id="prerequisites">Prerequisites</h3>
+<ol>
+<li>First install <a href="https://www.python.org/downloads/release/python-31011/">Python 3.10.11</a> or above</li>
+<li>Install <a href="https://pip.pypa.io/en/stable/installation/">pip</a>
+   <code>sh
+   py https://bootstrap.pypa.io/get-pip.py</code></li>
+<li>
+<p>Choose one of the following solutions:</p>
+</li>
+<li>
+<p>Install Jupyter Notebook</p>
+<p><code>sh
+  pip install notebook</code></p>
+</li>
+<li>
+<p>Install Visual Studio Code, click on this <a href="https://code.visualstudio.com/">link</a></p>
+</li>
+</ol>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>Clone the repo
+   <code>sh
+   git clone https://github.com/jorgegmayorgas/ML_Project_YouTube_keyword_optimization.git</code></li>
+<li>Install Python libraries 
+   <code>sh
+   pip install -r installed_packages.txt</code></li>
+</ol>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+<h2 id="usage">Usage</h2>
+<p>Open with Jupyter Notebook or Visual Studio Code</p>
+<pre><code class="language-sh">   results_final_ml_project_youtube_keywords_optimization.ipynb
+</code></pre>
+<!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!--
+<!-- ROADMAP -->
+<h2 id="roadmap">Roadmap</h2>
+<!--- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Feature 3
+    - [ ] Nested Feature
+-->
+<p>See the <a href="https://github.com/jorgegmayorgas/ML_Project_YouTube_keyword_optimization/issues">open issues</a> for a full list of proposed features (and known issues).</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+<h2 id="contributing">Contributing</h2>
+<p>Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are <strong>greatly appreciated</strong>.</p>
+<p>If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!</p>
+<ol>
+<li>Fork the Project</li>
+<li>Create your Feature Branch (<code>git checkout -b feature/AmazingFeature</code>)</li>
+<li>Commit your Changes (<code>git commit -m 'Add some AmazingFeature'</code>)</li>
+<li>Push to the Branch (<code>git push origin feature/AmazingFeature</code>)</li>
+<li>Open a Pull Request</li>
+</ol>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+<h2 id="license">License</h2>
+<p>Distributed under the GNU AFFERO GENERAL PUBLIC LICENSE License. See <code>LICENSE.txt</code> for more information.</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+<h2 id="contact">Contact</h2>
+<p>Jorge Giménez - <a href="https://www.linkedin.com/in/jgimenezm/?locale=en_US">LinkedIn</a> - jorgegmayorgas@gmail.com</p>
+<p>Project Link: <a href="https://github.com/jorgegmayorgas/">https://github.com/jorgegmayorgas/</a></p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+<h2 id="acknowledgments">Acknowledgments</h2>
+<ul>
+<li>Ale, Noa Valentina, Tita, Janis, Mom, David, the rest of the family and friends.</li>
+<li><a href="https://www.linkedin.com/school/the-bridge-digital-talent-accelerator/?originalSubdomain=es">The Bridge|Talent Accelerator</a> for their <a href="https://www.thebridge.tech/bootcamps/data-science?kw=the%20bridge%20data%20science&amp;cpn=21006651326&amp;utm_medium=ppc&amp;utm_source=adwords&amp;utm_campaign=ADSM_ALL_MARCA_GOOGLE_CONV_SEARCH&amp;utm_term=the%20bridge%20data%20science&amp;hsa_kw=the%20bridge%20data%20science&amp;hsa_net=adwords&amp;hsa_ver=3&amp;hsa_cam=21006651326&amp;hsa_ad=692242187661&amp;hsa_acc=1272778203&amp;hsa_src=g&amp;hsa_grp=158138127583&amp;hsa_mt=e&amp;hsa_tgt=kwd-816707328670&amp;gad_source=1&amp;gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xS_bqJk05H-kE2szZqnRfBh7Bk2ZQ0eagIWUe2HDrLw_sqyc9nnIegaAl6GEALw_wcB">Data Science Bootcamp</a></li>
+<li><a href="https://www.google.com">Google</a> for maintaning the awesome online video sharing and social media platform that is <a href="https://www.youtube.com">YouTube</a></li>
+<li><a href="https://www.kaggle.com/asaniczka">Asaniczka</a>  the creator of the Dataset used in this project</li>
+<li><a href="https://www.kaggle.com/">Kaggle</a> for providing such  quantity of datasets</li>
+<li><a href="https://github.com/othneildrew/">othneildrew</a> The creator of this <a href="https://github.com/othneildrew/Best-README-Template?tab=readme-ov-file">Markdown template</a></li>
+</ul>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+<!-- [product-screenshot]: images/intro_ppt.jpg -->
+<!-- [PowerPoint]: https://img.shields.io/badge/Microsoft-Powerpoint-red.svg?logo=data:image/svg%2bxml;base64,PHN2ZyBmaWxsPSIjQjc0NzJBIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TWljcm9zb2Z0IFBvd2VyUG9pbnQ8L3RpdGxlPjxwYXRoIGQ9Ik0xMy41IDEuNXExLjQ1MyAwIDIuNzk1LjM3NSAxLjM0Mi4zNzUgMi41MDggMS4wNiAxLjE2Ni42ODYgMi4xMiAxLjY0MS45NTYuOTU1IDEuNjQxIDIuMTIxLjY4NiAxLjE2NiAxLjA2MSAyLjUwOFEyNCAxMC41NDcgMjQgMTJxMCAxLjQ1My0uMzc1IDIuNzk1LS4zNzUgMS4zNDItMS4wNiAyLjUwOC0uNjg2IDEuMTY2LTEuNjQxIDIuMTItLjk1NS45NTYtMi4xMjEgMS42NDEtMS4xNjYuNjg2LTIuNTA4IDEuMDYxLTEuMzQyLjM3NS0yLjc5NS4zNzUtMS4yOSAwLTIuNTItLjMwNS0xLjIzLS4zMDQtMi4zMzctLjg4NC0xLjEwOC0uNTgtMi4wNjMtMS40MTgtLjk1NS0uODM4LTEuNjkzLTEuODkzSC45OTdxLS40MTEgMC0uNzA0LS4yOTNUMCAxNy4wMDRWNi45OTZxMC0uNDEuMjkzLS43MDNULjk5NiA2aDMuODlxLjczOS0xLjA1NSAxLjY5NC0xLjg5My45NTUtLjgzNyAyLjA2My0xLjQxOCAxLjEwNy0uNTggMi4zMzctLjg4NFExMi4yMSAxLjUgMTMuNSAxLjV6bS43NSAxLjUzNXY4LjIxNWg4LjIxNXEtLjE0LTEuNjQtLjgyNi0zLjA3Ni0uNjg2LTEuNDM2LTEuNzgyLTIuNTMxLTEuMDk1LTEuMDk2LTIuNTM3LTEuNzgyLTEuNDQxLS42ODUtMy4wNy0uODI2em0tNS4yNjIgNy41N3EwLS42OC0uMjI4LTEuMTY2LS4yMjktLjQ4Ni0uNjI3LS43OS0uMzk5LS4zMDUtLjkzOC0uNDQ2LS41MzktLjE0LTEuMTcyLS4xNEgyLjg0OHY3Ljg2M2gxLjg0di0yLjc0Mkg1LjkzcS41NzQgMCAxLjExOS0uMTd0Ljk3OC0uNDkzcS40MzQtLjMyMi42OTgtLjgwMi4yNjMtLjQ4LjI2My0xLjExNHpNMTMuNSAyMXExLjE3MiAwIDIuMjYyLS4yODd0Mi4wNTYtLjgycS45NjctLjUzNCAxLjc3Ni0xLjI3OC44MDgtLjc0NCAxLjQxOC0xLjY2NC42MS0uOTIuOTg0LTEuOTg2LjM3NS0xLjA2Ny40NjktMi4yMjdoLTkuNzAzVjMuMDM1cS0xLjczNS4xNC0zLjI3LjkwOFQ2Ljc5NyA2aDQuMjA3cS40MSAwIC43MDMuMjkzdC4yOTMuNzAzdjEwLjAwOHEwIC40MS0uMjkzLjcwM3QtLjcwMy4yOTNINi43OTdxLjY0NC43MTUgMS40MTIgMS4yNzEuNzY4LjU1NyAxLjYyMy45NDQuODU1LjM4NyAxLjc4MS41ODZRMTIuNTQgMjEgMTMuNSAyMXpNNS44MTIgOS41OThxLjU3NSAwIC45MTUuMjI4LjM0LjIyOS4zNC44MzggMCAuMjctLjEyNC40NC0uMTIzLjE3LS4zMS4yNzUtLjE4OC4xMDUtLjQyMi4xNDYtLjIzNC4wNDEtLjQ0NS4wNDFINC42ODdWOS41OThaIi8+PC9zdmc+  -->
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>
