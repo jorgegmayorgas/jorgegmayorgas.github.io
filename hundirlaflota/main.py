@@ -9,7 +9,6 @@ import playsound
 import random
 
 
-
 def main():
     #ruta_completa = os.getcwd() + "\\"
     #ruta_completa = ruta_completa.replace("\\","/")
