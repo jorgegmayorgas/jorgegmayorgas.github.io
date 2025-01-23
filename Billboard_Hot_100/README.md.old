@@ -37,7 +37,7 @@
 <h3 align="center">EDA of a dataset of Billboard Hot 100</h3>
 
   <p align="center">
-    This is an Exploratory Data Analysis of Billboard Hot 100 using this <a href="https://en.wikipedia.org/wiki/Battleship_(game)">dataset</a>
+    This is an Exploratory Data Analysis of Billboard Hot 100 using this <a href="https://www.kaggle.com/datasets/thedevastator/billboard-hot-100-audio-features">dataset</a>
     <br />
     <a href="https://github.com/jorgegmayorgas/jorgegmayorgas.github.io/tree/gh-pages/Billboard_Hot_100/EDA"><strong>Explore the docs »</strong></a>
     <br />
