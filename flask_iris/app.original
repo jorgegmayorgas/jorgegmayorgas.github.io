@@ -1,11 +1,3 @@
-import numpy as np
-import os
-import pandas as pd
-import joblib
-import pickle
-import random
-import subprocess
-import urllib.request
 from flask import Flask, jsonify, request,render_template, send_from_directory
 from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
 from sklearn.preprocessing import StandardScaler,MinMaxScaler,OneHotEncoder,MultiLabelBinarizer,OneHotEncoder,OrdinalEncoder
@@ -15,6 +7,14 @@ from sklearn.utils import shuffle
 from sklearn.metrics import accuracy_score, precision_score, recall_score, classification_report, confusion_matrix,ConfusionMatrixDisplay,r2_score, mean_absolute_error, mean_squared_error,mean_absolute_percentage_error,r2_score
 from sklearn.model_selection import train_test_split,GridSearchCV,RandomizedSearchCV
 from sklearn.decomposition import PCA
+import joblib
+import numpy as np
+import os
+import pandas as pd
+import pickle
+import random
+import subprocess
+import urllib.request
 
 
 #import scripts.bootcampviztools as bc
@@ -31,12 +31,14 @@ label_dict={'setosa':0,'versicolor':1,'virginica':2}
 label_dict_reverse={0:'setosa',1:'versicolor',2:'virginica'}
 target="species"
 features_cat= ['sepal_length_(cm)','sepal_width_(cm)','petal_length_(cm)','petal_width_(cm)']
-root_path = "/home/jorgegmayorgas/teampracticejj/"
+#root_path = "/home/jorgegmayorgas/teampracticejj/"
+root_path = "/var/www/irismlapi/"
 # Enruta la landing page (endpoint /)
 @app.route('/', methods=['GET'])
 def hello(): # Ligado al endopoint "/" o sea el home, con el método GET
-    
-    #html='<!DOCTYPE html><head><title>BOOOOOO 2</title></head><body>Bienvenido a mi API del modelo advertising!!! <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png"> <link rel="manifest" href="icons/site.webmanifest"></body>'
+
+    #html='<!DOCTYPE html><head><title>BOOOOOO 2</title></head><body>Bienvenido a mi API del modelo advertising!!! <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="3
+#2x32" href="icons/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png"> <link rel="manifest" href="icons/site.webmanifest"></body>'
     #return html
     #landing_path = root_path + "/landing/"
     #full_path= landing_path + "index.html"
@@ -61,26 +63,56 @@ def predictrf(): # Ligado al endpoint '/api/v1/predictrf', con el método GET
         result_json={
         'error': '001',
         'message': 'lsepal parameter is mandatory'
-    }
-        return jsonify(result_json)    
+        }
+        return jsonify(result_json)
     if  not wsepal:
         result_json={
         'error': '002',
         'message': 'wsepal parameter is mandatory'
-    }
-        return jsonify(result_json)    
+        }
+        return jsonify(result_json)
     if  not lpetal:
         result_json={
         'error': '003',
         'message': 'lpetal parameter is mandatory'
-    }   
-        return jsonify(result_json)    
+        }
+        return jsonify(result_json)
+    
     if not  wpetal:
         result_json={
         'error': '004',
         'message': 'wpetal parameter is mandatory'
-    }   
+        }
         return jsonify(result_json)
+    
+    if not lsepal.isdigit():
+       result_json={
+        'error': '005',
+        'message': 'lsepal parameter is not a numeric value'
+        }
+       return jsonify(result_json)
+    
+    if not wsepal.isdigit():
+       result_json={
+        'error': '006',
+        'message': 'wsepal parameter is not a numeric value'
+        }
+       return jsonify(result_json)
+    
+    if not lpetal.isdigit():
+       result_json={
+        'error': '007',
+        'message': 'lpetal parameter is not a numeric value'
+        }
+       return jsonify(result_json)
+    
+    if not wpetal.isdigit():
+       result_json={
+        'error': '008',
+        'message': 'wpetal parameter is not a numeric value'
+        }
+       return jsonify(result_json)
+    
     dict_get_values={'sepal_length_(cm)':[lsepal],
     'sepal_width_(cm)':[wsepal],
     'petal_length_(cm)':[lpetal],
@@ -108,25 +140,49 @@ def predictk(): # Ligado al endpoint '/api/v1/predictk', con el método GET
         'error': '001',
         'message': 'lsepal parameter is mandatory'
     }
-        return jsonify(result_json)    
+        return jsonify(result_json)
     if  not wsepal:
         result_json={
         'error': '002',
         'message': 'wsepal parameter is mandatory'
     }
-        return jsonify(result_json)    
+        return jsonify(result_json)
     if  not lpetal:
         result_json={
         'error': '003',
         'message': 'lpetal parameter is mandatory'
-    }   
-        return jsonify(result_json)    
+    }
+        return jsonify(result_json)
     if not  wpetal:
         result_json={
         'error': '004',
         'message': 'wpetal parameter is mandatory'
-    }   
-        return jsonify(result_json)    
+    }
+        return jsonify(result_json)
+    if not lsepal.isdigit():
+       result_json={
+        'error': '005',
+        'message': 'lsepal parameter is not a numeric value'
+    }
+       return jsonify(result_json)
+    if not wsepal.isdigit():
+       result_json={
+        'error': '006',
+        'message': 'wsepal parameter is not a numeric value'
+    }
+       return jsonify(result_json)
+    if not lpetal.isdigit():
+       result_json={
+        'error': '007',
+        'message': 'lpetal parameter is not a numeric value'
+    }
+       return jsonify(result_json)
+    if not wpetal.isdigit():
+       result_json={
+        'error': '008',
+        'message': 'wpetal parameter is not a numeric value'
+    }
+       return jsonify(result_json)
     dict_get_values={'sepal_length_(cm)':[lsepal],
     'sepal_width_(cm)':[wsepal],
     'petal_length_(cm)':[lpetal],
@@ -153,7 +209,7 @@ def numericflowerclasses(): # Ligado al endpoint '/api/v1/predict', con el méto
 # Enruta la funcion al endpoint /api/v1/retrainforest
 @app.route('/api/v1/retrainforest/', methods=['GET'])
 def retrainforest(): # Rutarlo al endpoint '/api/v1/retrain/', metodo GET
-    
+
     if os.path.exists(root_path + "data/retrain_random_forest.csv"):
         data = pd.read_csv(root_path + 'data/retrain_random_forest.csv')
         X = data[features_cat]
@@ -162,14 +218,14 @@ def retrainforest(): # Rutarlo al endpoint '/api/v1/retrain/', metodo GET
                                                             y,
                                                             test_size = 0.20,
                                                             random_state=42)
-        model = RandomForestClassifier(n_estimators=150,random_state=42)  # 150 trees in the forest   
+        model = RandomForestClassifier(n_estimators=150,random_state=42)  # 150 trees in the forest
         model.fit(X_train, y_train)
         y_pred = model.predict(X_test)
         filename = f'{root_path}random_forest_joblib.pkl'
-        
+
         with open(filename, 'wb') as file:
             joblib.dump(model, file)
-        
+
         message = "Model Random Forest retrained"
         message = message + "<pre>" + str(classification_report(y_test,y_pred)) + "</pre>"
         return message
@@ -184,24 +240,23 @@ def retrainknn(): # Rutarlo al endpoint '/api/v1/retrainknn/', metodo GET
                                                             y,
                                                             test_size = 0.20,
                                                             random_state=42)
-        model = KNeighborsClassifier(n_neighbors=12) 
+        model = KNeighborsClassifier(n_neighbors=12)
         model.fit(X_train, y_train)
         y_pred = model.predict(X_test)
         filename = f'{root_path}knn_joblib.pkl'
-        
+
         with open(filename, 'wb') as file:
             joblib.dump(model, file)
-        
+
         message = "Model KNN retrained"
         message = message + "<pre>" + str(classification_report(y_test,y_pred)) + "</pre>"
         return message
-    
-@app.route('/webhook_2024', methods=['POST'])
+@app.route('/webhook_2025', methods=['POST'])
 def webhook():
     # Ruta al repositorio donde se realizará el pull
-    path_repo = '/home/jorgegmayorgas/teampracticejj'
-    servidor_web = '/var/www/jorgegmayorgas_pythonanywhere_com_wsgi.py' 
-
+    path_repo = '/var/www/irismlapi'
+    #servidor_web = '/var/www/jorgegmayorgas_pythonanywhere_com_wsgi.py'
+    servidor_web= '/var/www/irismlapi/irismlapi.wsgi'
     # Comprueba si la solicitud POST contiene datos JSON
     if request.is_json:
         payload = request.json
@@ -210,7 +265,7 @@ def webhook():
             # Extrae el nombre del repositorio y la URL de clonación
             repo_name = payload['repository']['name']
             clone_url = payload['repository']['clone_url']
-            
+
             # Cambia al directorio del repositorio
             try:
                 os.chdir(path_repo)
